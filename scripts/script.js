@@ -170,18 +170,40 @@ startButton.addEventListener('click', () => {
                 setTimeout(() => createParticles(30), 2000); // Частицы через 2 сек
                 setTimeout(() => createSparks(15, window.innerWidth / 3, window.innerHeight / 3), 3000); // Искры в углу через 4 сек
                 setTimeout(() => createExplosion(window.innerWidth * 0.75, window.innerHeight * 0.25), 4000); // Взрыв в углу через 6 сек
-                setTimeout(() => createParticles(20), 4500); // Еще частицы через 7 сек
-                setTimeout(() => createSparks(25, window.innerWidth / 2, window.innerHeight * 0.75), 5000); // Искры внизу через 9 сек
+                setTimeout(() => createParticles(20), 4350); // Еще частицы через 7 сек
+                setTimeout(() => createSparks(25, window.innerWidth / 2, window.innerHeight * 0.75), 4950); // Искры внизу через 9 сек
 
                 // Переход на новую страницу через 11 секунд
                 setTimeout(() => {
                     window.location.href = 'math.html';
-                }, 6000);
+                }, 5300);
             })
             .catch(error => {
                 console.error("Ошибка воспроизведения:", error);
                 window.location.href = 'math.html';
             });
+
+            // Сборка таблицы из элементов (на 8-й секунде)
+            setTimeout(() => {
+                startButton.classList.remove('moving');
+                title.classList.remove('moving');
+                description.classList.remove('moving');
+                typewriterLeft.classList.remove('moving');
+                typewriterRight.classList.remove('moving');
+
+                startButton.classList.add('to-table');
+                title.classList.add('to-table');
+                description.classList.add('to-table');
+                typewriterLeft.classList.add('to-table-left');
+                typewriterRight.classList.add('to-table-right');
+                extraTopLeft.classList.add('to-table');
+                extraTopRight.classList.add('to-table');
+                extraBottomLeft.classList.add('to-table');
+                extraBottomRight.classList.add('to-table');
+
+                tableContainer.classList.add('active');
+            }, 8000);
+
     } else {
         console.error("Элемент audio не найден");
         window.location.href = 'math.html';
