@@ -224,7 +224,7 @@
             margin: 0 auto;
         }
     }
-/* Затемнение фона */
+
 .overlay {
     position: fixed;
     top: 0;
@@ -241,7 +241,6 @@
     background: rgba(0, 0, 0, 0.95);
 }
 
-/* Контейнер для частиц и искр */
 .particles-container {
     position: fixed;
     top: 0;
@@ -252,7 +251,6 @@
     z-index: 15;
 }
 
-/* Искры */
 .spark {
     position: absolute;
     width: 6px;
@@ -284,7 +282,6 @@
     }
 }
 
-/* Частицы трансформации */
 .transform-particle {
     position: absolute;
     width: 10px;
@@ -316,7 +313,6 @@
     }
 }
 
-/* Эффект взрыва для кнопки */
 .explosion {
     position: absolute;
     width: 100px;
@@ -341,7 +337,6 @@
     }
 }
 
-/* Трансформация кнопки */
 .retro.transforming {
     animation: buttonTransform 11s ease forwards;
 }
@@ -375,7 +370,6 @@
     }
 }
 
-/* Трансформация заголовка */
 h1.transforming {
     animation: titleTransform 11s ease forwards;
 }
@@ -404,7 +398,6 @@ h1.transforming {
     }
 }
 
-/* Трансформация описания */
 .description.transforming {
     animation: descTransform 11s ease forwards;
 }
@@ -429,7 +422,6 @@ h1.transforming {
     }
 }
 
-/* Трансформация столбцов с уравнениями */
 .typewriter-column.transforming {
     animation: columnTransform 11s ease forwards;
 }
